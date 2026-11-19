@@ -34,10 +34,7 @@ jobs:
         - configuration: release
           job_name: "Build (release)"
     container:
-      image: tizen-nui-docker-local.bart.sec.samsung.net/dali-ci-env:ubuntu22.04-v1
-      credentials:
-        username: ${{ secrets.BART_USERNAME }}
-        password: ${{ secrets.BART_IDENTITY_TOKEN }}
+      image: ghcr.io/dalihub/dali-ci-env:ubuntu22.04-v1
     env:
       CC: gcc
       CXX: g++
